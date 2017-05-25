@@ -1,1 +1,158 @@
-<h1>it works, madafacka</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Amit Zur &middot; Happy Code</title>
+  <!--<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">-->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+	* { box-sizing: border-box; }
+	html, body { height: 100%; }
+	body { margin: 0; background: url('linedpaper.png');
+	  /*font-family: 'Handlee', cursive;*/
+	  font-family: 'Raleway', sans-serif;
+	  line-height: 1.5;
+	}
+	#main {
+	  width: 100%;
+	  height: 100%;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+	#content {
+	  height: 480px;
+	  width: 640px;
+	  padding: 0 40px;
+	  background: #fff; #eceff1;
+	  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	  transition: box-shadow .3s cubic-bezier(0.53, 0.01, 0.36, 1.63);
+	  position: relative;
+	}
+
+	#content:hover {
+	  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+	}
+
+	.z-depth-1 {
+	  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	}
+	.z-depth-2 {
+	  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+	}
+	.z-depth-3 {
+	  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+	}
+	.z-depth-4 {
+	  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+	}
+	.z-depth-5 {
+	  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+	}
+	h1 { text-align: center; color: #546e7a; font-weight: 300; }
+	#clock { position: absolute; top: 20px; right: 20px; display: flex; align-items: center;}
+	#roundclock { height: 24px; width: 24px; border: 1px solid #313233; border-radius: 50%; margin-right: 8px; position: relative;}
+	#hours, #minutes, #seconds { position: absolute; height: 12px; top: 0; left: 12px; border-left: 1px solid black; transform-origin: bottom; }
+	#hours { border-color: blue; height: 6px; top: 6px;}
+	#minutes { border-color: red; height: 10px; top: 2px; }
+	#seconds { border-color: green; height: 11px; top: 1px; }
+	#myname { color: #e64a19; font-weight: 400; }
+	#avatar { border-radius: 50%; position: absolute; top: -60px; left: 30px; display: block; height: 120px; }
+	#social { display: flex; width: 50%; justify-content: space-between; margin: 0 auto; font-size: 24px; }
+	#description { margin: 3em auto; }
+	a { color: #e64a19; }
+	a { visited: #f50057; }
+	.social-link { display: block; width: 48px; height: 48px; text-align: center; line-height: 48px; border-radius: 50%; transition: background .3s; }
+	.social-link:hover { background: #eceff1; }
+	.social-link:active { background: #cfd8dc; }
+
+	@media (max-height: 768px) {
+	  #content { height: 360px; }
+	}
+
+	@media (max-width: 880px) {
+	  #content { width: 480px; }
+	  #social { width: 80%; }
+	  h1 { margin-top: 80px; }
+	  #avatar { left: 50%; transform: translateX(-50%); }
+	  #description { margin-top: 0; }
+	}
+
+	@media (max-width: 520px) {
+	  #content, #content:hover { background: transparent; box-shadow: none; }
+	  #social { width: 80%; }
+	  #clock { top: auto; right: 10px; transform: scale(0.8); transform-origin: right; bottom: 10px; }
+	}
+
+	@media (max-height: 520px) {
+	  #content, #content:hover { background: transparent; box-shadow: none; }
+	  #avatar { position: static; margin: 0 auto; transform: none; }
+	  h1 { margin-top: 0; }
+	  #clock { top: auto; right: 10px; transform: scale(0.8); transform-origin: right; bottom: 10px; }
+	}
+
+  </style>
+</head>
+<body>
+	<div id="main">
+	  <div id="clock"><div id="roundclock"><div id="minutes"></div><div id="hours"></div><div id="seconds"></div></div><span id="time"></span></div>
+	  <div id="content">
+		<img src="https://preview.ibb.co/cBVTi5/avatar_squeek.jpg" alt="" id="avatar" class="z-depth-1">
+		<h1>Hey, I'm <span id="myname">Amit Zur</span></h1>
+		<p id="description">I'm a freelance web developer from Israel, a Mozilla Tech Speaker and co-organizer of
+		  <a href="https://hackernoon.com/goodness-squad-a8704d594a7a">Goodness Squad</a>
+		</p>
+		<div id="social">
+		<div id="twitter">
+		  <a class="social-link" href="https://twitter.com/amitzur" title="Twitter"><i class="fa fa-twitter"></i></a>
+		</div>
+		<div id="medium">
+		  <a class="social-link" href="https://medium.com/@amitzur" title="Medium"><i class="fa fa-medium"></i></a>
+		</div>
+		<div id="github">
+		  <a class="social-link" href="https://github.com/amitzur" title="GitHub"><i class="fa fa-github"></i></a>
+		</div>
+		<div id="linkedin">
+		  <a class="social-link" href="https://www.linkedin.com/in/amitzur/" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+		</div>
+		<div id="blog">
+		  <a class="social-link" href="http://blog.amitzur.com" title="Blog"><i class="fa fa-align-left"></i></a>
+		</div>
+		</div>
+	  </div>
+	</div>
+	<script>
+      var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+	  function formatDate(d) {
+	    return days[d.getDay()] + ", " + d.getDate() + " " + monthNames[d.getMonth() + 1] + " " + d.getHours() + ":" + d.getMinutes();
+	  }
+	  function secondsAngle(d) {
+	    return d.getSeconds()/60*360;
+	  }
+	  function minutesAngle(d) {
+	    return d.getMinutes()/60*360;
+	  }
+	  function hoursAngle(d) {
+	    return d.getHours()/12*360;
+	  }
+	  function updateClock() {
+        var d = new Date();
+        clock.textContent = formatDate(d);
+        seconds.style.transform = "rotate(" + secondsAngle(d) + "deg)";
+        minutes.style.transform = "rotate(" + minutesAngle(d) + "deg)";
+        hours.style.transform = "rotate(" + hoursAngle(d) + "deg)";
+	  }
+	  var clock = document.getElementById("time");
+	  var seconds = document.getElementById("seconds");
+	  var minutes = document.getElementById("minutes");
+	  var hours = document.getElementById("hours");
+	  updateClock();
+	  setInterval(updateClock, 1000);
+	</script>
+</body>
+</html>
