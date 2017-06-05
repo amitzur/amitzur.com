@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{ htmlWebpackPlugin.options.title }}</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+</head>
+<body>
+<div id="main">
+  <div id="clock"><div id="roundclock"><div id="minutes"></div><div id="hours"></div><div id="seconds"></div></div><span id="time"></span></div>
+  <div id="content">
+	<img src="https://preview.ibb.co/cBVTi5/avatar_squeek.jpg" alt="" id="avatar" class="z-depth-1">
+	<h1>Hey, I'm <span id="myname">Amit Zur</span></h1>
+	<p id="description">I'm a freelance web developer from Israel, a Mozilla Tech Speaker and co-organizer of
+	  <a href="https://hackernoon.com/goodness-squad-a8704d594a7a">Goodness Squad</a>
+	</p>
+	{{> social }}
+  </div>
+</div>
+
+</body>
+</html>
