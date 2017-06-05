@@ -6,7 +6,7 @@ import CopyWebpackPlugin from 'copy-webpack-plugin';
 import webpack from 'webpack';
 
 const isProd = process.env.NODE_ENV === 'production';
-const title = "Amit Zur &middot; Happy Code";
+const title = "Amit Zur \u00B7 Happy Code";
 
 const htmlWebpackPlugin = new HTMLWebpackPlugin({
   title,
