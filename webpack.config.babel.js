@@ -2,6 +2,7 @@ import path from 'path';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import webpack from 'webpack';
 
 const isProd = process.env.NODE_ENV === 'production';
@@ -25,12 +26,12 @@ const uglifyJsPlugin = new webpack.optimize.UglifyJsPlugin({
 
 const extractTextPlugin = new ExtractTextPlugin("[hash].css");
 const cleanPlugin = new CleanWebpackPlugin(['dist']);
+const copyPlugin = new CopyWebpackPlugin([{ from: "CNAME" }]);
 
-const plugins = [htmlWebpackPlugin, cleanPlugin, extractTextPlugin];
+const plugins = [htmlWebpackPlugin, cleanPlugin, extractTextPlugin, copyPlugin];
 
 if (isProd) {
   plugins.push(uglifyJsPlugin);
-  plugins.push(extractTextPlugin);
 }
 
 module.exports = {
