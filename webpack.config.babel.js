@@ -69,7 +69,7 @@ module.exports = {
         query: {
           partialDirs: path.resolve(__dirname, 'src', 'templates', 'partials'),
           helperDirs : path.resolve(__dirname, 'src', 'templates', 'helpers'),
-          inlineRequires: "\/(img|media)\/" // NOTE: go here if things don't work. the regex might be weak!
+          inlineRequires: "\/img\/" // NOTE: go here if things don't work. the regex might be weak!
         }
       }
     ]
